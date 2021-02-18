@@ -15,6 +15,11 @@ jobs:
       matrix:
         node: [ 10.23.3-alpine3.10 ]
     steps:
+      - name: Test environment variables
+        env:
+          NODE_VERSION: ${{ matrix.node }}
+        run: echo $NODE_VERSION
+        
       - name: Check Out Repo 
         uses: actions/checkout@v2
 
