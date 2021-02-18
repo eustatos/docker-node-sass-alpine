@@ -41,7 +41,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: eustatos/node-sass:${{ matrix.node }}
-          args: ${{ matrix.node }}
+          build-args: |
+            NODE_VERSION=10.23.3-alpine3.10
           
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
