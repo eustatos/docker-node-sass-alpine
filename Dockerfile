@@ -1,4 +1,4 @@
-FROM node:10.23.3-alpine3.10
+FROM node:${NODE_VERSION:-latest}
 
 RUN echo NODE_VERSION: $NODE_VERSION
 
