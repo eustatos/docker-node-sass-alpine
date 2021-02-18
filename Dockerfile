@@ -2,7 +2,7 @@ FROM node:$NODE_VERSION
 
 RUN apk update && \
     apk upgrade && \
-    apk add git g++ gcc libgcc libstdc++ linux-headers make python && \
+    apk add git g++ gcc libgcc libstdc++ linux-headers make python zip && \
     apk update && \
     npm install npm@latest -g
 
