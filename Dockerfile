@@ -1,4 +1,6 @@
-FROM $NODE_VERSION
+FROM 10.23.3-alpine3.10
+
+RUN echo $NODE_VERSION
 
 RUN apk update && \
     apk upgrade && \
